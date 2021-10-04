@@ -1,0 +1,182 @@
+creating object
+----------------
+new objectName ({
+  
+})
+
+What you need to do when you want to connect the object with the part of he application
+---------------------------------------------------------------------------------------
+new objectName ({
+  el: "#id",
+})
+
+Data Storing <script> code
+------------
+new objectName ({
+  el: "#id",
+  data: {
+    title: "vue beginner"
+  }
+})
+
+Data Display on HTML
+--------------------
+<h1>{{ title }}</h1>
+
+data storage tag 
+----------------
+title: "Vue beginner",
+number: 17,
+boolenValue: true,
+myArray: ["Tim", 21, true],
+myObjectArray: [
+  {name: "Tim", age: 21},
+  {name: "Sarah", age: 22},
+  {name: "Tommy", age: 27},
+]
+
+Data Display on Array
+--------------------
+    <h1> {{ title }} </h1>
+    <h1> {{ myArray[0] }} </h1>
+    <h1> {{ myObjectArray[0].age }} </h1>
+    
+Meth Example
+------------
+
+    new Vue({
+      el: "#title",
+      data: {
+      myArray: ["Tim", 21, true],
+    },
+      methods: {
+        sayHi: function () {
+          return "Hi " + this.myArray[0];
+        }
+      }
+    })
+    
+Object that is in variable can change in broswer console
+Example Code -
+ var vm = new Vue({
+      el: "#title",
+      data: {
+      myArray: ["Tim", 21, true],
+    },
+      methods: {
+        sayHi: function () {
+          return "Hi " + this.myArray[0];
+        }
+      }
+    })
+    
+ In console-
+  vm.____
+---------------------
+v-show = "false"  //display:none
+v-show = "true" 
+---------------------
+v-html = "<p>Hello</p>" //display html
+usage example- 
+<div v-html="code"></div>
+<script>
+  new Vue({
+      el: "#title",
+      data: {
+      myArray: ["Tim", 21, true],
+      code: "<p>Hello World</p>",
+    },
+      methods: {
+        sayHi: function () {
+          return "Hi " + this.myArray[0];
+        }
+      }
+    })
+</script>
+
+Data Binding
+------------
+v-bind.___
+
+For example- 
+<div id="title">
+    <img v-bind:src="myPicture.src" v-bind:alt="myPicture.alt" v-bind:href="myPicture.href">
+  </div>
+  <script type="text/javascript">
+    new Vue({
+      el: "#title",
+      data: {
+        myPicture: {src: "Attention.PNG", alt: "Attention", href: "#"}
+    }
+    })
+ </script>
+ 
+ Way of DataBinding
+ -----------------
+ v-model.  //it will reload and run automatically.  //the text that wrote in inpute will appear in h1
+ // that can use to store data and display
+ 
+ for example - 
+   <div id="title">
+    <input v-model="input"/>
+    <h1>{{ input }}</h1>
+  </div>
+  <script type="text/javascript">
+    new Vue({
+      el: "#title",
+      data: {
+        input: ""
+    }
+    })
+  </script>
+  
+  Event in Vue
+  ------------
+  v-on:click="name"
+  
+  Others
+.stop
+.prevent
+.capture
+.self
+.once
+.passive
+
+example- v-on:click.once
+  
+  Example-  
+  <div id="title">
+    <button class="btn btn-primary" v-on:click="sayHi">Click</button>
+  </div>
+  <script type="text/javascript">
+    new Vue({
+      el: "#title",
+      methods: {
+        sayHi: function() {                  || sayHi: function(event) {      console.log(event)  } <--- use this to get mouse event
+          alert("hi");
+        }
+      }
+    })
+  </script>
+
+P.S. || @clicke is the same as v-on:click
+
+Example Code of v-model and click and keyup.___---      keyup.enter="output". if user click enter on keyboard the output will work
+                                                        can also use with special key, key up key down or whatever
+
+  <div id="title">
+    <input type="text" v-model="input" @keyup.enter="output"/>
+  </div>
+  <script type="text/javascript">
+    new Vue({
+      el: "#title",
+      data: {
+        input:""
+      } ,
+      methods: {
+        output: function() {
+          alert (this.input * 10);
+        }
+      }
+    })
+  </script>
