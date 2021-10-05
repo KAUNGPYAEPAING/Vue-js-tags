@@ -216,3 +216,53 @@ In html
         
 That function can also use with v-show for visibility
 ---------------------------------------------------
+
+Array Look vasibility with UL
+
+Example -
+        <ul>
+        <li v-for="detail in details">{{ detail }}</li>
+        </ul>
+ 
+ <script>
+ const app = Vue.createApp({
+  data(){
+    return {
+      product: "Sock",
+      description: "This is the discription of the product",
+      image: "./assets/images/socks_green.jpg",
+      url: "https://github.com/KAUNGPYAEPAING/",
+      inventory: 20,
+      onSale: true,
+      details: ['50% cotton', '30% wool', '20% polyester'],
+    }
+  }
+})
+
+ </script>
+
+
+Event Listening 
+----------------
+v-on:click('method')    Short form is @click()
+
+example-
+<div class="cart">Cart({{ cart }})</div>
+<button class="button"  v-on:click="addToCart">Add to Cart</button>
+
+<script>
+  data(){
+    return {
+      cart: 0,
+    }
+  },
+
+  methods: {
+    addToCart() {
+      this.cart += 1;
+    }
+  }
+  </script>
+  
+-------------------------------
+@mouseover = "function()",             //Hover
