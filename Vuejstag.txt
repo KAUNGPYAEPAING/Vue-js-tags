@@ -184,3 +184,19 @@ Example Code of v-model and click and keyup.___---      keyup.enter="output". if
       }
     })
   </script>
+
+
+
+---------------------------------------------------
+v-bind 
+we can also use v-bind in another way 
+example 
+<image :src="image">
+
+What can v-bind do more 
+:src = "image",
+:alt = "description",
+:href = "url",
+:class = "isActive",
+:style = "isActive",
+:disabled = "isDisable"
