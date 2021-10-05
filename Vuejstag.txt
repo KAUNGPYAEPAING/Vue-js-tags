@@ -10,6 +10,10 @@ new objectName ({
   el: "#id",
 })
 
+The other way to call an element id is 
+--------------------------------------
+object.mount("#id");
+
 Data Storing <script> code
 ------------
 new objectName ({
