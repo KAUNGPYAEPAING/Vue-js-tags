@@ -200,3 +200,16 @@ What can v-bind do more
 :class = "isActive",
 :style = "isActive",
 :disabled = "isDisable"
+
+---------------------------------------------------
+v-if
+v-else
+
+In js object or app write 
+data(){
+  inStock: true
+}
+
+In html
+        <p v-if="inStock">In Stock</p>
+        <p v-else="inStock">Out Stock</p>
