@@ -213,3 +213,6 @@ data(){
 In html
         <p v-if="inStock">In Stock</p>
         <p v-else="inStock">Out Stock</p>
+        
+That function can also use with v-show for visibility
+---------------------------------------------------
