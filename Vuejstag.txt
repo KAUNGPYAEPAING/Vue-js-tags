@@ -275,3 +275,22 @@ example-
  ----------------
  
  :class ="[isActive ? activeClass: '']"       // is isActive class is true. activeClass will activate
+
+--------------------------------
+Computer Property 
+
+Example-
+  <h1>{{ title }}</h1>
+  
+  <script>
+    computed: {
+    title(){
+      return this.brand + ' ' + this.product
+    }
+  }
+  </script>
+ ---------------------------------
+ Component & props
+
+app.component('product-display', { })           //no s in component
+First one is component name and the second is an object to configure our component
