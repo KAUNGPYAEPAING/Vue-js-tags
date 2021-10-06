@@ -266,3 +266,12 @@ example-
   
 -------------------------------
 @mouseover = "function()",             //Hover
+ __________________________________________________________________
+ Important tips of class binding
+ 
+ :class="{ active: activeClass }"       // is activeClass is true. active will activate
+ 
+ Ternary operator 
+ ----------------
+ 
+ :class ="[isActive ? activeClass: '']"       // is isActive class is true. activeClass will activate
